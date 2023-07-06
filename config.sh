@@ -80,9 +80,16 @@ port = $port
 reject_future_seconds = $reject_future_seconds
 
 [authorization]
+"
+
+# Add the pubkey_whitelist section if the argument is not null
+if [ -n "$pubkey_whitelist" ]; then
+    config_content+="
+
 pubkey_whitelist = [
     $whitelist_string
 ]"
+fi
 
 # Write the config.toml file
 config_file="/home/ubuntu/relaying-nostr-rs-relay/config.toml"
