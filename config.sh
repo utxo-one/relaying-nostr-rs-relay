@@ -85,6 +85,6 @@ pubkey_whitelist = [
 ]"
 
 # Write the config.toml file
-config_file="/home/ubuntu/nostr-rs-relay/config.toml"
+config_file="/home/ubuntu/relaying-nostr-rs-relay/config.toml"
 echo "$config_content" > "$config_file"
 echo "Generated config.toml successfully."
